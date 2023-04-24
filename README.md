@@ -4,7 +4,7 @@ NewtonGPT is a project that allows users to interact with OpenAI's ChatGPT via a
 
 ## Directory Structure
 
-'''
+```bash
 newtonGPT
 │
 ├── chatgpt_asyncio_telnet_api.py # Main script for ChatGPT Telnet server
@@ -18,7 +18,7 @@ newtonGPT
 ├── simple_hello_telnet.py # Simple Telnet server example
 ├── minimal_telnet.py # Minimalistic Telnet server example
 └── simple_asyncio_hello_telnet.py # Asyncio-based Telnet server example
-'''
+```
 
 ## How It Works
 
