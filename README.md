@@ -12,7 +12,7 @@ newtonGPT
 ├── pt100_serial.py # Serial number generator for PT100 
 ├── telnet_chatgpt.py # (Deprecated) Initial version of the Telnet server
 │
-└── testing # Directory containing test scripts
+└── testing # Directory containing test scripts used to
 ├── echo_telnet.py # Test script for echoing messages via Telnet
 ├── openai_test.py # Test script for basic interaction with OpenAI API
 ├── simple_hello_telnet.py # Simple Telnet server example
