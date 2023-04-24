@@ -52,5 +52,5 @@ python chatgpt_asyncio_telnet_cli.py
 
 4. You can now interact with ChatGPT via the Telnet interface by typing messages and pressing Enter.
 
-##Note
+#Note
 The telnet_chatgpt.py script is a deprecated initial version of the Telnet server and is kept for reference purposes. The newer chatgpt_asyncio_telnet_api.py script should be used for the primary functionality.
