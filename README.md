@@ -1,6 +1,6 @@
 # NewtonGPT
 
-NewtonGPT is a project that allows users to interact with OpenAI's ChatGPT via a Telnet interface. It utilizes the Python `asyncio` library to handle concurrent connections and `aiohttp` for asynchronous API calls.
+NewtonGPT is a project that provides a Telnet interface allowing Apple Newton MessagePad 2000 devices to interact with OpenAI's ChatGPT. It utilizes the Python `asyncio` library to handle concurrent connections and `aiohttp` for asynchronous API calls, making it possible for the Newton MessagePad 2000 to communicate with the ChatGPT model.
 
 ## Directory Structure
 
