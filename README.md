@@ -3,6 +3,8 @@
 NewtonGPT is a project that allows users to interact with OpenAI's ChatGPT via a Telnet interface. It utilizes the Python `asyncio` library to handle concurrent connections and `aiohttp` for asynchronous API calls.
 
 ## Directory Structure
+
+'''
 newtonGPT
 │
 ├── chatgpt_asyncio_telnet_api.py # Main script for ChatGPT Telnet server
@@ -16,7 +18,7 @@ newtonGPT
 ├── simple_hello_telnet.py # Simple Telnet server example
 ├── minimal_telnet.py # Minimalistic Telnet server example
 └── simple_asyncio_hello_telnet.py # Asyncio-based Telnet server example
-
+'''
 
 ## How It Works
 
@@ -34,12 +36,16 @@ newtonGPT
 
 ```bash
 export OPENAI_API_KEY=your_openai_api_key
+''
 
 2. Run the main server script in one terminal:
 
+```bash
 python chatgpt_asyncio_telnet_api.py
+''
 
 3. In another terminal, run the client script to connect to the server:
+
 python chatgpt_asyncio_telnet_cli.py
 
 4. You can now interact with ChatGPT via the Telnet interface by typing messages and pressing Enter.
