@@ -30,4 +30,10 @@ To run the `newtonGPT.py` script, make sure you have Python 3.7 or later install
 python newtonGPT.py
 ```
 
-This will start the telnet server, and you can connect your Newton MessagePad 2000 over Wi-Fi to interact with ChatGPT.
+This will start the telnet server, and you can connect your Newton MessagePad 2000 over Wi-Fi to interact with ChatGPT. I used the PT100 program on the Newton. You may have to adjust the screen settings to get it to look nice. 
+
+Connect to the ip of the computer running newtonGPT.py. Make sure to connect to port 6801. Don't forget to export your api key to an environmental variable with:
+
+```bash
+$ export OPENAI_API_KEY="your_openai_api_key"
+```
