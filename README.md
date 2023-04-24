@@ -1,56 +1,33 @@
 # NewtonGPT
 
-NewtonGPT is a project that provides a Telnet interface allowing Apple Newton MessagePad 2000 devices to interact with OpenAI's ChatGPT. It utilizes the Python `asyncio` library to handle concurrent connections and `aiohttp` for asynchronous API calls, making it possible for the Newton MessagePad 2000 to communicate with the ChatGPT model.
+NewtonGPT is a project that aims to enable the Apple Newton MessagePad 2000 to connect to ChatGPT over Wi-Fi, providing users with an interactive and useful AI assistant on their Newton devices.
 
-## Directory Structure
+## Overview
 
-```bash
-newtonGPT
-│
-├── chatgpt_asyncio_telnet_api.py # Main script for ChatGPT Telnet server via api
-├── chatgpt_asyncio_telnet_cli.py # Connect via chatgpt linux cli
-├── pt100_serial.py # Serial number generator for PT100 
-├── telnet_chatgpt.py # (Deprecated) Initial version of the Telnet server
-│
-└── testing # Directory containing test scripts used to
-├── echo_telnet.py # Test script for echoing messages via Telnet
-├── openai_test.py # Test script for basic interaction with OpenAI API
-├── simple_hello_telnet.py # Simple Telnet server example
-├── minimal_telnet.py # Minimalistic Telnet server example
-└── simple_asyncio_hello_telnet.py # Asyncio-based Telnet server example
-```
+The main script in this project is `newtonGPT.py`, which sets up a telnet interface for the Newton MessagePad 2000 to communicate with ChatGPT via a Wi-Fi connection. This script is based on asyncio, enabling efficient and concurrent handling of multiple connections.
 
-## How It Works
+Another script, `chatgpt_asyncio_telnet_cli.py`, is under development and will be designed to work with the ChatGPT CLI tool.
 
-1. The `chatgpt_asyncio_telnet_api.py` script is the main server application. It listens for incoming Telnet connections and establishes asynchronous communication with the connected clients. 
+Additionally, the `PT100_serial.py` script is a utility that generates serial numbers for the PT100 program on the Newton MessagePad 2000.
 
-2. For each connected client, it maintains a conversation history with ChatGPT, allowing contextual responses.
+## newtonGPT.py
 
-3. The `chatgpt_asyncio_telnet_cli.py` script is a simple Telnet client that connects to the server, allowing users to send messages and receive replies from ChatGPT.
+This script runs an asyncio-based telnet server that listens for incoming connections from the Newton MessagePad 2000. When connected, the script processes user messages, sends them to the ChatGPT API, and returns ChatGPT's responses to the Newton device over the telnet connection.
 
-4. The `pt100_serial.py` script is a standalone serial number generator for PT100 devices. It is not directly related to the ChatGPT Telnet functionality but is included as a utility in the project.
+## chatgpt_asyncio_telnet_cli.py (in progress)
 
-## Usage
+This script, currently under development, will provide an alternative way to interact with ChatGPT using the ChatGPT CLI tool.
 
-1. First, set up the required environment variables, such as the OpenAI API key:
+## PT100_serial.py
+
+This utility script generates serial numbers for the PT100 program on the Newton MessagePad 2000.
+
+## Getting Started
+
+To run the `newtonGPT.py` script, make sure you have Python 3.7 or later installed, and the required packages (aiohttp, asyncio, and openai) are installed. Set your OpenAI API key as an environment variable or replace the placeholder in the script with your API key. Then simply run the script:
 
 ```bash
-export OPENAI_API_KEY=your_openai_api_key
+python newtonGPT.py
 ```
 
-2. Run the main server script in one terminal:
-
-```bash
-python chatgpt_asyncio_telnet_api.py
-```
-
-3. In another terminal, run the client script to connect to the server:
-
-```bash
-python chatgpt_asyncio_telnet_cli.py
-```
-
-4. You can now interact with ChatGPT via the Telnet interface by typing messages and pressing Enter.
-
-## Note
-The telnet_chatgpt.py script is a deprecated initial version of the Telnet server and is kept for reference purposes. The newer chatgpt_asyncio_telnet_api.py script should be used for the primary functionality.
+This will start the telnet server, and you can connect your Newton MessagePad 2000 over Wi-Fi to interact with ChatGPT.
